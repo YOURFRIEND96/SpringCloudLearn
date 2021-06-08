@@ -1,0 +1,16 @@
+# consul 服务端口号
+server:
+  port: 8004
+
+spring:
+  application:
+    name: consul-provider-payment
+
+# consul 注册中心地址
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discory:
+        #hostname: 127.0.0.1
+        service-name: ${spring.application.name}
